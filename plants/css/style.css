@@ -111,14 +111,38 @@ body {
 
 /* Main - Welcome styles start */
 
-.welcome {
+.welcome__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     height: 532px;
     background-color: #EDF2EC;
 }
 .welcome__img {
-    position: relative;
     width: 448.8px;
     height: 407.36px;
     left: 109px;
-    top: 62px;
+    top: 62px; 
+}
+.welcome__title {
+    max-width: 549px;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 50px;
+    color: #717171;
+    margin-bottom: 22px;
+}
+.welcome__title-plants {
+color: #499A18;
+}
+.welcome {
+    background-color: #EDF2EC;
+}
+.welcome__text {
+    max-width: 525.44px;;
+    font-size: 20px;
+    line-height: 35px;
+    color: #636060;
+    margin-bottom: 22px;
 }
