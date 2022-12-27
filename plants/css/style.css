@@ -63,7 +63,7 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.2;
+    line-height: 1.25;
     color: #636060;
 }
 .wrapper {
@@ -107,7 +107,7 @@ body {
     color: #E06733;
 }
 
-/* Header styles start */
+/* Header styles end */
 
 /* Main - Welcome styles start */
 
@@ -118,6 +118,7 @@ body {
     justify-content: space-between;
     height: 532px;
     background-color: #EDF2EC;
+    
 }
 .welcome__img {
     width: 448.8px;
@@ -126,12 +127,13 @@ body {
     top: 62px; 
 }
 .welcome__title {
+    margin-top: 98px;
     max-width: 549px;
     font-weight: 700;
     font-size: 45px;
     line-height: 50px;
     color: #717171;
-    margin-bottom: 22px;
+    margin-bottom: 42px;
 }
 .welcome__title-plants {
 color: #499A18;
@@ -144,22 +146,29 @@ color: #499A18;
     font-size: 20px;
     line-height: 35px;
     color: #636060;
-    margin-bottom: 22px;
+    margin-bottom: 48px;
 }
 .welcome__button {
-    width: 162px;
-    height: 48px;
-    font-size: 16px;
-    padding: 14px 26px;
+    width: 158px;
+    height: 44px;
+    font-size: 15px;
+    padding: 14px 27px;
     text-transform: uppercase;
     color: #000000;
     border: 2px solid #E06733;
     border-radius: 10px;
+    margin-bottom: 94px;
+    
 }
 .welcome__button:hover, .header__link:focus {
     background-color: #E06733;
     color: #FFFFFF;
 }
+
+/* Main - Welcome styles end */
+
+/* Main - About styles start */
+
 .about__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -188,4 +197,67 @@ color: #499A18;
 .about__img {
     left: 867px;
     top: 93px;
+}
+
+/* Main - About styles end */
+
+/* Main - Service styles start */
+
+.service {
+    background: #EDF2EC;
+}
+.service__wrapper {
+    height: 1300px;
+}
+.service-projects__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.service-projects__title {
+    margin-top: 40px;
+    max-width: 306px;
+    font-family: 'Inika';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 52px;
+    color: #499A18;
+    margin-bottom: 90px;
+}
+.service__button {
+    min-width: 559px; 
+    margin-top: 69px;
+    margin-left: 142px;
+}
+.service__button-item {
+    width: 161px;
+    height: 50px;
+    padding: 12px 40px;
+    font-family: 'Inika';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #E06733;
+    border: 1px solid #E06733;
+    border-radius: 5px;
+    margin-right: 34px;
+}
+.service-cards__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.service-card__img {
+    border-radius: 20px 20px 0px 0px;
+}
+.service-card_title {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #E06733;
+    margin: 10px 105px;
+}
+.service-card__subtitle {
+    margin: 0 31px;
 }
