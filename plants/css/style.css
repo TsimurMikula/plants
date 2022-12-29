@@ -160,7 +160,7 @@ color: #499A18;
     margin-bottom: 94px;
     
 }
-.welcome__button:hover, .header__link:focus {
+.welcome__button:hover, .header__link:focus, .header__link:active {
     background-color: #E06733;
     color: #FFFFFF;
 }
@@ -241,6 +241,10 @@ color: #499A18;
     border-radius: 5px;
     margin-right: 34px;
 }
+.service__button-item:hover, .service__button-item:focus, .service__button-item:active {
+    background-color: #E06733;
+    color: #FFFFFF;
+}
 .service-cards__wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -260,4 +264,8 @@ color: #499A18;
 }
 .service-card__subtitle {
     margin: 0 31px;
+}
+.service-card__border {
+    border: 1px solid #E3E1D5;
+    border-radius: 20px 20px 20px 20px;
 }
