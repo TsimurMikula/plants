@@ -219,9 +219,9 @@ color: #499A18;
     font-family: 'Inika';
     font-weight: 400;
     font-size: 40px;
-    line-height: 52px;
+    line-height: 52.12px;
     color: #499A18;
-    margin-bottom: 90px;
+    margin-bottom: 80px;
 }
 .service__button {
     min-width: 559px; 
@@ -248,8 +248,9 @@ color: #499A18;
 .service-cards__wrapper {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-content: space-between;
     justify-content: space-between;
+    height: 955px;
 }
 .service-card__img {
     border-radius: 20px 20px 0px 0px;
@@ -260,12 +261,30 @@ color: #499A18;
     font-size: 20px;
     line-height: 20px;
     color: #E06733;
-    margin: 10px 105px;
+    margin: 5px 105px;
+    text-align: center;
 }
 .service-card__subtitle {
-    margin: 0 31px;
+    margin: 14px 31px;
 }
 .service-card__border {
+    height: 450px;
     border: 1px solid #E3E1D5;
     border-radius: 20px 20px 20px 20px;
+}
+
+/* Main - Service styles end */
+
+/* Main - Price styles start */
+
+.price__wrapper {
+    height: 560px;
+}
+.price__title {
+    font-family: 'Inter';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000000;
+    margin-top: 40px;
 }
