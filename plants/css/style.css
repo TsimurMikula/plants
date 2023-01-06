@@ -66,6 +66,10 @@ body {
     line-height: 1.25;
     color: #636060;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
 .wrapper {
     max-width: 1220px;
     margin: 0 auto;
@@ -278,6 +282,9 @@ color: #499A18;
 /* Main - Price styles start */
 
 .price__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     height: 560px;
 }
 .price__title {
@@ -287,4 +294,134 @@ color: #499A18;
     line-height: 48px;
     color: #000000;
     margin-top: 40px;
+    margin-bottom: 60px;
+}
+.price__wrap {
+    width: 332px;
+    height: 282.01px;
+    left: 109px;
+    top: 149px;
+    border: 1px solid #E3E1D5;
+    border-radius: 20px;    
+}
+.price__buttons {
+    margin: 34px 41px;
+}
+.price__button-item {
+    width: 250px;
+    height: 50px;
+    left: 150px;
+    top: 347.01px;
+    border: solid #EDF2EC;
+    border-radius: 20px;
+    margin-bottom: 32px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    text-align: left;
+    padding-left: 36px;
+}
+.price__icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin-left: 194px;
+    margin-top: 17px;
+}
+.price__subtitle {
+    width: 452px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: right;
+    color: #000000;
+    margin-top: 40px;
+    margin-bottom: 38px;
+}
+.price__subtitle-gardeners {
+    color: #499A18;
+}
+.price__contact-button {
+    width: 162px;
+    height: 50px;
+    left: 1169px;
+    top: 181.01px;
+    border: 1px solid #E06733;
+    border-radius: 5px;
+    margin-left: 290px;
+
+    font-family: 'Inika';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: center;
+    color: #E06733;
+    background-color: #FFFFFF;
+}
+.price__contact-img {
+    width: 152px;
+    height: 174.99px;
+    margin-left: 300px;
+    margin-top: 39px;
+}
+
+/* Main - Price styles end */
+
+/* Main - Contacts styles start */
+
+.contacts {
+    background: #EDF2EC;
+    height: 550px;
+}
+.contacts__wrapper-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contacts__title {
+    width: 195px;
+    height: 51px;
+    margin-top: 60px;
+    
+    font-family: 'Inika';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    color: #499A18;
+    margin-bottom: 35px;
+}
+.contacts__wrapper-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contacts__img {
+    position: relative;
+    width: 400px;
+    height: 496.99px;
+    bottom: 93px;
+}
+.contacts__button-item {
+    height: 50px;
+    width: 450px;
+    background: #D6E7D2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0px;  
+    border: 0 solid #717171;
+   
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    color: #717171;
+    text-align: left;
+    padding-left: 20px;
+}
+.contacts__icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin-left: 399px;
+    margin-top: 17px;
 }
