@@ -360,6 +360,10 @@ color: #499A18;
     color: #E06733;
     background-color: #FFFFFF;
 }
+.price__contact-button:hover, .price__contact-button:focus, .price__contact-button:active {
+    background-color: #E06733;
+    color: #FFFFFF;
+}
 .price__contact-img {
     width: 152px;
     height: 174.99px;
@@ -425,3 +429,44 @@ color: #499A18;
     margin-left: 399px;
     margin-top: 17px;
 }
+
+/* Main - Contacts styles end */
+
+/* Main - Footer styles start */
+
+.footer__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 130px;
+
+    font-size: 20px;
+    line-height: 50px;
+    color: #000000;
+}
+.footer__data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 182px;
+    padding-right: 14px;
+    margin-top: 20px;
+}
+.footer__courses {
+    margin-top: 20px;
+}
+.footer__link {
+    text-decoration: none;
+    color: #000000;
+}
+.footer__social-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    width: 228px;
+    margin-left: -44px;
+    margin-top: 48px;
+}
+
+/* Main - Footer styles end */
