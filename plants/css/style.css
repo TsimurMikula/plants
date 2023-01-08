@@ -89,6 +89,18 @@ img {
     left: 0px;
     top: 0px;
 }
+.header__logo-link {
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: #000000;
+
+    font-family: 'Inika';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    padding-bottom: 6px;
+}
 .header__list {
     display: flex;
     flex-wrap: wrap;
