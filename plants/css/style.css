@@ -119,8 +119,18 @@ img {
     color: #010201;
     text-decoration: none;
 }
-.header__link:hover, .header__link:focus, .header__link:active {
+.header__link-home {
+    font-family: 'Inika';
+    font-weight: 700;
+    line-height: 50px;
+    text-decoration: none;
     color: #E06733;
+}
+.header__link:hover, .header__link:focus, .header__link:active {
+    color: #499A18;
+}
+.header__link-home:hover, .header__link-home:focus, .header__link-home:active {
+    color: #499A18;
 }
 
 /* Header styles end */
@@ -450,6 +460,7 @@ color: #499A18;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     height: 130px;
 
     font-size: 20px;
@@ -462,10 +473,10 @@ color: #499A18;
     justify-content: space-between;
     width: 182px;
     padding-right: 14px;
-    margin-top: 20px;
+   
 }
 .footer__courses {
-    margin-top: 20px;
+ margin-left: 40px;
 }
 .footer__link {
     text-decoration: none;
@@ -477,8 +488,8 @@ color: #499A18;
     justify-content: space-between;
     list-style: none;
     width: 228px;
-    margin-left: -44px;
-    margin-top: 48px;
+    margin-top: 36px;
+    
 }
 
 /* Main - Footer styles end */
