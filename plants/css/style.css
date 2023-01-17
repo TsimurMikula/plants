@@ -163,8 +163,6 @@ img {
 .welcome__img {
     width: 448.8px;
     height: 407.36px;
-    left: 109px;
-    top: 62px; 
 }
 .welcome__title {
     margin-top: 98px;
@@ -342,7 +340,7 @@ color: #499A18;
     border-radius: 20px;    
 }
 .price__buttons {
-    margin: 34px 41px;
+    margin: 34px 42px;
 }
 .price__button-item {
     width: 250px;
@@ -507,6 +505,167 @@ color: #499A18;
 
 /* Media start */
 
+@media screen and (max-width: 768px) {
+    .wrapper {
+        max-width: 668px;
+    }  
+    .header__wrapper {
+        height: 107px;
+    }
+    .header__logo {
+        padding-bottom: 5px;
+    }
+    .header__logo-pic {
+        padding-bottom: 5px;
+    } 
+    .welcome__wrapper {
+        flex-direction: row-reverse;
+        height: 420px;
+        margin-left: 2px;
+    }
+    .welcome__img {
+        width: 280px;
+        height: 254.15px; 
+        margin-bottom: 110px;
+    }
+    .welcome__title {
+        margin-top: 45px;
+        max-width: 341px;
+        font-size: 35px;
+        margin-bottom: 28px;
+    }
+    .welcome__subtitle {
+        max-width: 341px;
+        font-size: 16px;
+        line-height: 25px;
+        margin-bottom: 34px;
+    }
+    .about__wrapper {
+        justify-content: center;
+        height: 783px;
+    }
+    .about__title {
+        margin-top: 35px;
+        margin-left: 122px;
+        max-width: 423px;
+        font-size: 35px;
+        line-height: 46px;
+        text-align: center;
+        margin-bottom: 51px;
+    }
+    .about__subtitle {
+        margin-bottom: 52px;
+        max-width: 668px;        
+    }
+    .about__img {
+        margin-bottom: 85px;
+        width: 250px;
+        height: 258px;
+    }
+    .service__wrapper {
+        height: 1780px;
+    }
+    .service-projects__wrapper {
+        justify-content: flex-start;
+    }
+    .service-projects__title {
+        margin-top: 60px;
+        font-size: 35px;
+        line-height: 46px;
+        margin-bottom: 44px;
+    }
+    .service__button {
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-bottom: 38px;
+    }
+    .service-cards__wrapper {
+        height: 1426px;
+    }
+    .service-card__img {
+        height: 350px;
+    }
+    .service-card_title {
+        margin: 6px 0px;
+    }
+    .service-card__subtitle {
+        margin: 11px 29px;
+        text-align: center;
+    }
+    .service-card__border {
+        width: 281px;
+    }
+    .price__wrapper {
+        height: 585px;
+    }
+    .price__title {
+        font-size: 35px;
+        line-height: 42px;
+        margin-top: 43px;
+        margin-left: 15px;
+        margin-bottom: 56px;
+    }
+    .price__subtitle {
+        width: 296px;
+        font-size: 25px;
+        line-height: 35px;
+        margin-top: 142px;
+        margin-left: 40px;
+        margin-bottom: 28px;
+    }
+    .price__contact-button {
+        margin-left: 174px;
+    }
+    .price__contact-img {
+        margin-left: 184px;
+        margin-top: 36px;
+    }
+    .contacts {
+        height: 739px;
+    }
+    .contacts__title {
+        margin-top: 42px;
+        margin-bottom: 100px;
+    }
+    .contacts__wrapper-content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .contacts__img {
+        margin-top: 344px;
+        margin-left: 244px;
+        width: 200px;
+        height: 248.49px;
+    }
+    .contacts__button-item {
+        margin-left: 109px;
+    }
+    .contacts__icon {
+        margin-left: 508px;
+    }
+    .footer__wrapper {
+        flex-direction: column;
+        height: 181px;
+    }
+    .footer__data {
+        position: relative;
+        left: 4px;
+        top: 20px;
+        padding-right: 10px;
+    }
+    .footer__courses {
+        position: relative;
+        right: 24px;
+        top: 6px;
+    }
+    .footer__social-list {
+        position: relative;
+        top: 12px;
+        margin-top: 0px;  
+        margin-right: 40px;
+    }
+}
+
 @media screen and (max-width: 380px) {
    /* .body {
         width: 380px;
@@ -566,17 +725,6 @@ color: #499A18;
     .header__nav-close-line:last-child {
         transform: translateY(-50%) rotate(-45deg);
     }
-}
-/*@media screen and (max-width: 768px) {
-    body {
-        width: 768px;
-    }
-    .wrapper {
-        max-width: 668px;
-    }  
-    .header__wrapper {
-        height: 117px;
-    }  
 }
 
 /* Media end */
