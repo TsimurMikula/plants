@@ -52,13 +52,12 @@
   }
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 *, *::before, *::after {
     box-sizing: inherit;
 }
 body {
-    width: 1440px;
-    margin: 0 auto;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -85,9 +84,10 @@ img {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    height: 134px;
-    left: 0px;
-    top: 0px;
+    height: 124px;
+}
+.header__logo {
+     padding-bottom: 10px;
 }
 .header__logo-link {
     display: flex;
@@ -99,7 +99,7 @@ img {
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
-    padding-bottom: 6px;
+    
 }
 .header__list {
     display: flex;
@@ -107,7 +107,7 @@ img {
     list-style: none;
 }
 .header__item {
-    margin-right: 46px;    
+    margin-right: 47px;    
 }
 .header__item:last-child {
     margin-right: 0;
@@ -119,18 +119,33 @@ img {
     color: #010201;
     text-decoration: none;
 }
-.header__link-home {
-    font-family: 'Inika';
-    font-weight: 700;
-    line-height: 50px;
-    text-decoration: none;
+.header__link:hover, .header__link:focus, .header__link:active {
     color: #E06733;
 }
-.header__link:hover, .header__link:focus, .header__link:active {
-    color: #499A18;
+.header__burger {
+    display: none;
+    width: 40px;
+    height: 24px;
+    position: relative;
 }
-.header__link-home:hover, .header__link-home:focus, .header__link-home:active {
-    color: #499A18;
+.burger__line {
+    display: block;
+    width: 100%;
+    border: 1px solid #717171;
+    position: absolute;
+    left: 0;
+}
+.burger__line_first {
+    top: 0;
+}
+.burger__line_second {
+    top: 33%;
+}
+.burger__line_third {
+    top: 66%;
+}
+.burger__line_fourth {
+    top: 100%;
 }
 
 /* Header styles end */
@@ -144,13 +159,10 @@ img {
     justify-content: space-between;
     height: 532px;
     background-color: #EDF2EC;
-    
 }
 .welcome__img {
     width: 448.8px;
     height: 407.36px;
-    left: 109px;
-    top: 62px; 
 }
 .welcome__title {
     margin-top: 98px;
@@ -159,7 +171,7 @@ img {
     font-size: 45px;
     line-height: 50px;
     color: #717171;
-    margin-bottom: 42px;
+    margin-bottom: 44px;
 }
 .welcome__title-plants {
 color: #499A18;
@@ -172,19 +184,19 @@ color: #499A18;
     font-size: 20px;
     line-height: 35px;
     color: #636060;
-    margin-bottom: 48px;
+    margin-bottom: 49px;
 }
 .welcome__button {
     width: 158px;
     height: 44px;
-    font-size: 15px;
-    padding: 14px 27px;
+    font-size: 16px;
+    padding: 14px 24px;
     text-transform: uppercase;
     color: #000000;
     border: 2px solid #E06733;
     border-radius: 10px;
     margin-bottom: 94px;
-    
+    transition: 0.4s;    
 }
 .welcome__button:hover, .header__link:focus, .header__link:active {
     background-color: #E06733;
@@ -251,8 +263,8 @@ color: #499A18;
 }
 .service__button {
     min-width: 559px; 
-    margin-top: 69px;
-    margin-left: 142px;
+    margin-top: 72px;
+    margin-left: 138px;
 }
 .service__button-item {
     width: 161px;
@@ -266,6 +278,7 @@ color: #499A18;
     border: 1px solid #E06733;
     border-radius: 5px;
     margin-right: 34px;
+    transition: 0.4s; 
 }
 .service__button-item:hover, .service__button-item:focus, .service__button-item:active {
     background-color: #E06733;
@@ -287,11 +300,11 @@ color: #499A18;
     font-size: 20px;
     line-height: 20px;
     color: #E06733;
-    margin: 5px 105px;
+    margin: 6px 105px;
     text-align: center;
 }
 .service-card__subtitle {
-    margin: 14px 31px;
+    margin: 14px 29px;
 }
 .service-card__border {
     height: 450px;
@@ -321,19 +334,15 @@ color: #499A18;
 .price__wrap {
     width: 332px;
     height: 282.01px;
-    left: 109px;
-    top: 149px;
     border: 1px solid #E3E1D5;
     border-radius: 20px;    
 }
 .price__buttons {
-    margin: 34px 41px;
+    margin: 34px 42px;
 }
 .price__button-item {
     width: 250px;
     height: 50px;
-    left: 150px;
-    top: 347.01px;
     border: solid #EDF2EC;
     border-radius: 20px;
     margin-bottom: 32px;
@@ -343,7 +352,7 @@ color: #499A18;
     line-height: 20px;
     color: #000000;
     text-align: left;
-    padding-left: 36px;
+    padding-left: 35px;
 }
 .price__icon {
     position: absolute;
@@ -360,7 +369,7 @@ color: #499A18;
     text-align: right;
     color: #000000;
     margin-top: 40px;
-    margin-bottom: 38px;
+    margin-bottom: 42px;
 }
 .price__subtitle-gardeners {
     color: #499A18;
@@ -368,8 +377,6 @@ color: #499A18;
 .price__contact-button {
     width: 162px;
     height: 50px;
-    left: 1169px;
-    top: 181.01px;
     border: 1px solid #E06733;
     border-radius: 5px;
     margin-left: 290px;
@@ -381,6 +388,7 @@ color: #499A18;
     text-align: center;
     color: #E06733;
     background-color: #FFFFFF;
+    transition: 0.4s; 
 }
 .price__contact-button:hover, .price__contact-button:focus, .price__contact-button:active {
     background-color: #E06733;
@@ -390,7 +398,7 @@ color: #499A18;
     width: 152px;
     height: 174.99px;
     margin-left: 300px;
-    margin-top: 39px;
+    margin-top: 40px;
 }
 
 /* Main - Price styles end */
@@ -416,7 +424,7 @@ color: #499A18;
     font-size: 40px;
     line-height: 52px;
     color: #499A18;
-    margin-bottom: 35px;
+    margin-bottom: 37px;
 }
 .contacts__wrapper-content {
     display: flex;
@@ -427,7 +435,7 @@ color: #499A18;
     position: relative;
     width: 400px;
     height: 496.99px;
-    bottom: 93px;
+    bottom: 95px;
 }
 .contacts__button-item {
     height: 50px;
@@ -454,7 +462,7 @@ color: #499A18;
 
 /* Main - Contacts styles end */
 
-/* Main - Footer styles start */
+/* Footer styles start */
 
 .footer__wrapper {
     display: flex;
@@ -473,10 +481,9 @@ color: #499A18;
     justify-content: space-between;
     width: 182px;
     padding-right: 14px;
-   
 }
 .footer__courses {
- margin-left: 40px;
+ margin-left: 44px;
 }
 .footer__link {
     text-decoration: none;
@@ -488,8 +495,418 @@ color: #499A18;
     justify-content: space-between;
     list-style: none;
     width: 228px;
-    margin-top: 36px;
-    
+    margin-top: 36px;  
 }
 
-/* Main - Footer styles end */
+/* Footer styles end */
+
+/* Media start */
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        max-width: 668px;
+    }  
+    .header__wrapper {
+        height: 107px;
+    }
+    .header__logo {
+        padding-bottom: 5px;
+    }
+    .header__logo-pic {
+        padding-bottom: 5px;
+    } 
+    .welcome__wrapper {
+        flex-direction: row-reverse;
+        height: 420px;
+        margin-left: 2px;
+    }
+    .welcome__img {
+        width: 280px;
+        height: 254.15px; 
+        margin-bottom: 110px;
+    }
+    .welcome__title {
+        margin-top: 45px;
+        max-width: 341px;
+        font-size: 35px;
+        margin-bottom: 28px;
+    }
+    .welcome__subtitle {
+        max-width: 341px;
+        font-size: 16px;
+        line-height: 25px;
+        margin-bottom: 34px;
+    }
+    .about__wrapper {
+        justify-content: center;
+        height: 783px;
+    }
+    .about__title {
+        margin-top: 35px;
+        margin-left: 122px;
+        max-width: 423px;
+        font-size: 35px;
+        line-height: 46px;
+        text-align: center;
+        margin-bottom: 51px;
+    }
+    .about__subtitle {
+        margin-bottom: 52px;
+        max-width: 668px;        
+    }
+    .about__img {
+        margin-bottom: 85px;
+        width: 250px;
+        height: 258px;
+    }
+    .service__wrapper {
+        height: 1780px;
+    }
+    .service-projects__wrapper {
+        justify-content: flex-start;
+    }
+    .service-projects__title {
+        margin-top: 60px;
+        font-size: 35px;
+        line-height: 46px;
+        margin-bottom: 44px;
+    }
+    .service__button {
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-bottom: 38px;
+    }
+    .service-cards__wrapper {
+        height: 1426px;
+    }
+    .service-card__img {
+        height: 350px;
+    }
+    .service-card_title {
+        margin: 6px 0px;
+    }
+    .service-card__subtitle {
+        margin: 11px 29px;
+        text-align: center;
+    }
+    .service-card__border {
+        width: 281px;
+    }
+    .price__wrapper {
+        height: 585px;
+    }
+    .price__title {
+        font-size: 35px;
+        line-height: 42px;
+        margin-top: 43px;
+        margin-left: 15px;
+        margin-bottom: 56px;
+    }
+    .price__subtitle {
+        width: 296px;
+        font-size: 25px;
+        line-height: 35px;
+        margin-top: 142px;
+        margin-left: 40px;
+        margin-bottom: 28px;
+    }
+    .price__contact-button {
+        margin-left: 174px;
+    }
+    .price__contact-img {
+        margin-left: 184px;
+        margin-top: 36px;
+    }
+    .contacts {
+        height: 739px;
+    }
+    .contacts__title {
+        margin-top: 42px;
+        margin-bottom: 100px;
+    }
+    .contacts__wrapper-content {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .contacts__img {
+        margin-top: 344px;
+        margin-left: 244px;
+        width: 200px;
+        height: 248.49px;
+    }
+    .contacts__button-item {
+        margin-left: 109px;
+    }
+    .contacts__icon {
+        margin-left: 508px;
+    }
+    .footer__wrapper {
+        flex-direction: column;
+        height: 181px;
+    }
+    .footer__data {
+        position: relative;
+        left: 4px;
+        top: 20px;
+        padding-right: 10px;
+    }
+    .footer__courses {
+        position: relative;
+        right: 24px;
+        top: 6px;
+    }
+    .footer__social-list {
+        position: relative;
+        top: 12px;
+        margin-top: 0px;  
+        margin-right: 40px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .wrapper {
+        max-width: 330px;
+    }
+    .header__wrapper {
+        height: 96px;
+    }
+    .header__logo {
+        padding-bottom: 12px;
+    }
+    .header__burger {
+        display: block;
+        margin-bottom: 20px;
+    } 
+    .header__nav {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #EDF2EC;
+        z-index: 10;
+        padding: 75px;
+        transform: translateX(100%);
+        transition: .2s all linear;
+    } 
+    .header__nav_active {
+        transform: translateX(0);
+    }
+    .header__item {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    .header__item:last-child {
+        margin-bottom: 0;
+    }
+    .header__link {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .header__nav-close {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 36px;
+        right: 25px;
+        z-index: 11;
+    }
+    .header__nav-close-line {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #000000;
+        position: absolute;
+        top: 50%;
+    }
+    .header__nav-close-line:first-child {
+        transform: translateY(-50%) rotate(45deg);
+    }
+    .header__nav-close-line:last-child {
+        transform: translateY(-50%) rotate(-45deg);
+    }
+    .welcome__wrapper {
+        height: 300px;
+        margin-left: 0px;
+    }
+    .welcome__img {
+        display: none;
+    }
+    .welcome__title {
+        max-width: 330px;
+        font-size: 25px;
+        line-height: 35px;
+        padding-bottom: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .welcome__subtitle {
+        max-width: 314.52px;
+        margin-bottom: 28px;
+        padding-bottom: 0px;
+      
+    }
+    .welcome__button {
+        width: 100px;
+        height: 34.14px;
+        font-size: 10px;
+        padding: 8px 14px;
+        margin-bottom: 10px;
+    }
+    .about__wrapper {
+        height: 516px;
+    }
+    .about__title {
+        max-width: 288px;
+        font-size: 25px;
+        line-height: 33px;
+        margin-top: 22px;
+        margin-left: 22px;
+        margin-bottom: 0px;
+    }
+    .about__subtitle {
+        max-width: 330px; 
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 0px;       
+    }
+    .about__img {
+        margin-bottom: 40px;
+        width: 150px;
+        height: 147px;
+    }
+    .service__wrapper {  
+        height: 3150px;
+    }
+    .service-projects__title {
+        width: 187px;
+        font-size: 25px;
+        line-height: 33px;
+        margin-top: 22px;
+        margin-bottom: 38px;
+    }
+    .service__button {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: space-between;
+        min-width: 252px; 
+        height: 79px;
+        margin-bottom: 39px;
+        padding-right: 78px;
+    }
+    .service__button-item {
+        width: 121px;
+        height: 35px;
+        padding: 7px 28px;
+        font-size: 15px;
+        line-height: 20px;
+        margin-right: 0px;
+    }
+    .service-cards__wrapper {
+        height: 2870px;
+        justify-content: center;
+    }
+    .price__wrapper {
+        height: 512px;
+        justify-content: center;
+    }
+    .price__title {
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 18px;
+        margin-left: 74px;
+        margin-bottom: 36px;
+    }
+    .price__wrap {
+        width: 224px;
+        height: 235px;   
+    }
+    .price__buttons {
+        margin: 29px 22px;
+    }
+    .price__button-item {
+        width: 180px;
+        height: 49.72px;
+        margin-bottom: 14px;
+    
+        font-size: 15px;
+        padding-left: 28px;
+    }
+    .price__icon {
+        margin-left: 124px;
+        margin-top: 18px;
+    }
+    .price__subtitle {
+        width: 230px;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+    .price__contact-button {
+        width: 121px;
+        height: 35px;
+        margin-left: 54px;
+        margin-bottom: 30px;
+    
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .price__contact-img {
+        display: none;
+    }
+    .contacts {
+        height: 445px;
+    }
+    .contacts__title {
+        font-size: 25px;
+        line-height: 33px;
+        margin-top: 16px;
+        margin-left: 70px;
+        margin-bottom: 65px;
+    }
+    .contacts__img {
+        margin-top: 226px;
+        margin-left: 113px;
+        width: 100px;
+        height: 124.25px;
+    }
+    .contacts__button-item {
+        width: 300px;
+        height: 50px;
+        margin-left: 14px;
+    }
+    .contacts__icon {
+        margin-left: 277px;
+    }
+    .footer__wrapper {
+        flex-direction: column;
+        height: 146px;
+    }
+    .footer__data {
+        position: relative;
+        left: 3px;
+        top: 0px;
+        padding-right: 10px;
+    }
+    .footer__courses {
+        position: relative;
+        width: 210px;
+        height: 24px;
+        right: 22px;
+        top: -10px;
+    }
+    .footer__social-list {
+        position: relative;
+        height: 50px;
+        top: 14px;
+        right: 20px;
+        margin-top: 0px;  
+        margin-right: 0px;
+    }
+}
+
+/* Media end */
