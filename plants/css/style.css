@@ -358,6 +358,7 @@ color: #499A18;
     position: absolute;
     width: 16px;
     height: 16px;
+    cursor: pointer;
     margin-left: 194px;
     margin-top: 17px;
 }
@@ -686,10 +687,16 @@ color: #499A18;
         background-color: #EDF2EC;
         z-index: 10;
         padding: 75px;
-        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+                transform: translateX(100%);
+        -webkit-transition: .2s all linear;
+        -o-transition: .2s all linear;
         transition: .2s all linear;
     } 
     .header__nav_active {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
         transform: translateX(0);
     }
     .header__item {
