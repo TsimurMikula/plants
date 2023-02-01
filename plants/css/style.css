@@ -197,6 +197,7 @@ color: #499A18;
     border-radius: 10px;
     margin-bottom: 94px;
     transition: 0.4s;    
+    cursor: pointer;
 }
 .welcome__button:hover, .header__link:focus, .header__link:active {
     background-color: #E06733;
@@ -279,6 +280,7 @@ color: #499A18;
     border-radius: 5px;
     margin-right: 34px;
     transition: 0.4s; 
+    cursor: pointer;
 }
 .service__button-item:hover, .service__button-item:focus, .service__button-item:active {
     background-color: #E06733;
@@ -333,34 +335,107 @@ color: #499A18;
 }
 .price__wrap {
     width: 332px;
-    height: 282.01px;
+    height: auto;
     border: 1px solid #E3E1D5;
     border-radius: 20px;    
 }
-.price__buttons {
+.prices__accourdion {
     margin: 34px 42px;
 }
-.price__button-item {
+.price__accourdion_title {
     width: 250px;
     height: 50px;
-    border: solid #EDF2EC;
+    background-color: #EDF2EC;
     border-radius: 20px;
-    margin-bottom: 32px;
-
+    margin-top: 32px;
+    cursor: pointer;
+}
+.price__accourdion_title-text {
     font-weight: 700;
     font-size: 20px;
     line-height: 20px;
     color: #000000;
     text-align: left;
-    padding-left: 35px;
+    padding-left: 37px;
+    padding-top: 17px;
 }
-.price__icon {
-    position: absolute;
+.price__accourdion_title-icon {
+    position: relative;
     width: 16px;
     height: 16px;
+    top: -39px;
+    left: 191px;
+}
+.price__accourdion_title-iconTransform {
+    transform: rotateY(180deg);
+}
+.price__accourdion_content {
+    width: 250px;
+    height: 104px;
+    background-color: #D6E7D2;;
+    border-radius: 20px;
+    padding-top: 20px;
+}
+.price__accourdion_content-line {
+    position: relative;
+    left: 37px;
+    top: -26px;
+    width: 164px;
+    border: 0.5px solid #AEA1A1;   
+}
+.price__accourdion_content-text {
+    position: relative;
+    left: 37px;
+    top: -30px;
+    width: 169px;
+    height: 30px;
+    font-size: 10px;
+    line-height: 10px;
+    color: #717171;
+}
+.price__accourdion_content-costs {
+    position: relative;
+    left: 37px;
+    top: -34px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #000000;
+}
+.price__accourdion_content-cost {
+    font-weight: 700;
+    font-size: 16px;
+    color: #E06733;
+}
+.price__accourdion_content-button {
+    position: relative;
+    left: 37px;
+    top: -40px;
+    width: 86px;
+    height: 25px;
+    background: #FFFFFF;
+    border: #FFFFFF;
+    border-radius: 10px;
     cursor: pointer;
-    margin-left: 194px;
-    margin-top: 17px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #717171;
+}
+.price__accourdion_content-button:hover, .price__accourdion_content-button:focus, .price__accourdion_content-button:active {
+    background-color: #E06733;
+    color: #FFFFFF;
+}
+.price__accourdion_title + .price__accourdion_content {
+    display: none;
+}
+.price__accourdion_title.is-open + .price__accourdion_content {
+    display: block;
+    border-radius: 0 0 20px 20px;
+  }
+.price__accourdion_title.is-open {
+    background-color: #D6E7D2;
+    border-radius: 20px 20px 0 0;
 }
 .price__subtitle {
     width: 452px;
@@ -389,7 +464,8 @@ color: #499A18;
     text-align: center;
     color: #E06733;
     background-color: #FFFFFF;
-    transition: 0.4s; 
+    transition: 0.4s;
+    cursor: pointer; 
 }
 .price__contact-button:hover, .price__contact-button:focus, .price__contact-button:active {
     background-color: #E06733;
@@ -452,6 +528,7 @@ color: #499A18;
     color: #717171;
     text-align: left;
     padding-left: 20px;
+    cursor: pointer;
 }
 .contacts__icon {
     position: absolute;
@@ -459,6 +536,7 @@ color: #499A18;
     height: 16px;
     margin-left: 399px;
     margin-top: 17px;
+    cursor: pointer;
 }
 
 /* Main - Contacts styles end */
@@ -831,10 +909,10 @@ color: #499A18;
         width: 224px;
         height: 235px;   
     }
-    .price__buttons {
+    .prices__accourdion {
         margin: 29px 22px;
     }
-    .price__button-item {
+    .price__button_item {
         width: 180px;
         height: 49.72px;
         margin-bottom: 14px;
@@ -842,7 +920,7 @@ color: #499A18;
         font-size: 15px;
         padding-left: 28px;
     }
-    .price__icon {
+    .price__accourdion_title-icon {
         margin-left: 124px;
         margin-top: 18px;
     }
