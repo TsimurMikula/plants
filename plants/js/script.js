@@ -10,12 +10,10 @@
             menu.classList.remove('header__nav_active');
     });
     const menuLinks = document.querySelectorAll('.header__link');
-        if (window.innerWidth < 380) {
-            for (let i = 0; i < menuLinks.length; i += 1) {
-                menuLinks[i].addEventListener('click', () => {
-                    menu.classList.remove('header__nav_active');
-                });
-            }
+        for (let i = 0; i < menuLinks.length; i += 1) {
+            menuLinks[i].addEventListener('click', () => {
+                menu.classList.remove('header__nav_active');
+            });
         }
 }());
 
@@ -42,9 +40,78 @@ console.log('1. Вёрстка соответствует макету. Шири
 
 (function () {
     const pricesAccourdionIcon = document.querySelectorAll('.price__accourdion_title-icon')
-   pricesAccourdionIcon.forEach(priceAccourdionIcon => {
+    pricesAccourdionIcon.forEach(priceAccourdionIcon => {
     priceAccourdionIcon.addEventListener('click', () => {
     pricesAccourdionIcon.classList.toggle('price__accourdion_title-iconTransform');
     })
     })
+}());
+
+
+(function () {
+    
+    const serviceButton1 = document.querySelector('.service__button_item1');
+    const serviceButton2 = document.querySelector('.service__button_item2');
+    const serviceButton3 = document.querySelector('.service__button_item3');
+
+    const serviceCards1 = document.querySelectorAll('.service-card__border1');
+    const serviceCards2 = document.querySelectorAll('.service-card__border2');
+    const serviceCards3 = document.querySelectorAll('.service-card__border3');
+
+        serviceButton1.addEventListener('click', () => {
+            serviceCards1.forEach(serviceCard => {
+                if (serviceCard.classList.contains('service-card__border_blur')) {   
+                    serviceCard.classList.remove('service-card__border_blur')
+                }
+            })
+            serviceCards2.forEach(serviceCard => {
+                serviceCard.classList.toggle('service-card__border_blur')
+            })
+            serviceCards3.forEach(serviceCard => {
+                serviceCard.classList.toggle('service-card__border_blur')
+            })
+        })
+        serviceButton2.addEventListener('click', () => {
+            serviceCards2.forEach(serviceCard => {
+                if (serviceCard.classList.contains('service-card__border_blur')) {   
+                    serviceCard.classList.remove('service-card__border_blur')
+                }
+            })
+            serviceCards1.forEach(serviceCard => {
+                serviceCard.classList.toggle('service-card__border_blur')
+            })
+            serviceCards3.forEach(serviceCard => {
+                serviceCard.classList.toggle('service-card__border_blur')
+            })
+        })
+        serviceButton3.addEventListener('click', () => {
+            serviceCards3.forEach(serviceCard => {
+                if (serviceCard.classList.contains('service-card__border_blur')) {   
+                    serviceCard.classList.remove('service-card__border_blur')
+                }
+            })
+            serviceCards1.forEach(serviceCard => {
+                serviceCard.classList.toggle('service-card__border_blur')
+            })
+            serviceCards2.forEach(serviceCard => {
+                serviceCard.classList.toggle('service-card__border_blur')
+            })
+        })
+
+
+    const serviceButtons = document.querySelectorAll('.service__button_item');
+
+    serviceButtons.forEach(serviceButton => {
+        serviceButton.addEventListener('click', () => {
+            serviceButton.classList.toggle('service__button_item-active')
+            })
+        })
+}());
+
+(function () {
+    const contactsSelect= document.querySelector('.contacts__select_title');
+    
+    contactsSelect.addEventListener('click', () => {
+          
+    });
 }());
