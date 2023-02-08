@@ -109,9 +109,24 @@ console.log('1. Вёрстка соответствует макету. Шири
 }());
 
 (function () {
-    const contactsSelect= document.querySelector('.contacts__select_title');
-    
-    contactsSelect.addEventListener('click', () => {
-          
+    const selectTitle = document.querySelector('.contacts__select_title');
+    const selectContent = document.querySelector('.contacts__select_content');
+    const selectItems = document.querySelectorAll('.contacts__select_content-item');
+    const selectIcon = document.querySelector('.contacts__icon');
+
+    selectTitle.addEventListener('click', () => {
+        selectTitle.classList.toggle('is-open');
+        selectIcon.classList.toggle('rotate');
+
     });
+
+    selectItems.forEach(selectItem => {
+        selectItem.addEventListener('click', () => {
+            selectTitle.classList.remove('is-open');
+            selectTitle.innerText = selectItem.innerText;
+            selectContent.classList.toggle('open');
+        })
+    })
+
+       
 }());
