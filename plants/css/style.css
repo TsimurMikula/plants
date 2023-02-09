@@ -377,7 +377,7 @@ color: #499A18;
     left: 191px;
 }
 .price__accourdion_title-iconTransform {
-    transform: rotateY(180deg);
+    transform: rotate(180deg);
 }
 .price__accourdion_content {
     width: 250px;
@@ -542,19 +542,38 @@ color: #499A18;
     cursor: pointer;
 }
 .contacts__select_title.is-open {
-    font-size: 16px;
+    font-size: 20px;
+    line-height: 40px;
     padding-left: 35px;
     background: #C1E698;
     color: #717171;
     border: 1px solid #D6E7D2;
-    box-shadow: 0px 0px 0px; 
+    box-shadow: 0px 0px 0px;
+}
+.contacts__select_title.active {
+    font-size: 16px;
+    line-height: 40px;
+    padding-left: 35px;
+    background: #C1E698;
+    color: #717171;
+    border: 1px solid #D6E7D2;
+    box-shadow: 0px 0px 0px;
+}
+.contacts__select_title:hover {
+    line-height: 40px;
+    padding-left: 35px;
+    background: #C1E698;
+    color: #717171;
+    border: 1px solid #D6E7D2;
+    box-shadow: 0px 0px 0px;
+    transition: 0.4s;  
 }
 .contacts__icon {
     position: absolute;
     width: 16px;
     height: 16px;
-    margin-left: 338px;
-    margin-top: 12px;
+    margin-left: 364px;
+    margin-top: 11px;
     cursor: pointer;
 }
 .rotate {
@@ -596,10 +615,28 @@ color: #499A18;
     padding: 17px 76px 32px 35px;
     margin-top: 47px;
 }
-.contacts__select_content + .contacts__select_content-address {
+.contacts__select_content + .contacts__select_content-address1 {
+    display: none;    
+}
+.contacts__select_content.open1 + .contacts__select_content-address {
+    display: block;
+}
+.contacts__select_content-address1 + .contacts__select_content-address {
     display: none;
 }
-.contacts__select_content.open + .contacts__select_content-address{
+.contacts__select_content-address1.open2 + .contacts__select_content-address {
+    display: block;
+}
+.contacts__select_content-address2 + .contacts__select_content-address {
+    display: none;
+}
+.contacts__select_content-address2.open3 + .contacts__select_content-address {
+    display: block;
+}
+.contacts__select_content-address3 + .contacts__select_content-address {
+    display: none;
+}
+.contacts__select_content-address3.open4 + .contacts__select_content-address {
     display: block;
 }
 .select__content_item-str {
@@ -632,14 +669,17 @@ color: #499A18;
     line-height: 13px;
     text-align: center;
     color: #717171;
+    cursor: pointer;
 
     border: 1px solid #E06733;
     border-radius: 5px;
     margin-top: 24px;
     margin-left: 127px;
 }
-
-
+.select__content_item-button:hover, .select__content_item-button:focus, .select__content_item-button:active {
+    background-color: #E06733;
+    color: #FFFFFF;
+}
 
 /* Main - Contacts styles end */
 
