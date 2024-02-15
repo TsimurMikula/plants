@@ -1,6 +1,3 @@
-console.log('1. Вёрстка валидная +10\n2. Вёрстка семантическая +20\n3. Вёрстка соответствует макету +48\n4. Требования к css + 12\n5. Интерактивность, реализуемая через css +20\nИтоговая оценка: 100 баллов.');
-console.log('1. Вёрстка соответствует макету. Ширина экрана 768px +24\n2. Вёрстка соответствует макету. Ширина экрана 380px +24\n3. Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки. Весь контент страницы при этом сохраняется: не обрезается и не удаляется +15\n4. На ширине экрана 380рх и меньше реализовано адаптивное меню +22 (Допускается появление адаптивного меня на ширине более 380, но не допускается на ширине более 770px)');
-
 //Burger menu start
 
 (function () {
@@ -35,101 +32,77 @@ console.log('1. Вёрстка соответствует макету. Шири
     const serviceCards2 = document.querySelectorAll('.service-card__border2');
     const serviceCards3 = document.querySelectorAll('.service-card__border3');
 
-    const serviceButtons = document.querySelectorAll('.service__button_item');
+    serviceButton1.addEventListener('click', () => {
+      serviceButton2.classList.remove("service__button_item-active");   
+      serviceButton3.classList.remove("service__button_item-active");
+      serviceButton1.classList.toggle("service__button_item-active");
+      if (serviceButton1.classList.contains("service__button_item-active")) {
+        serviceCards2.forEach((serviceCard) => {
+          serviceCard.classList.add("service-card__border_blur");
+        });
+        serviceCards3.forEach((serviceCard) => {
+          serviceCard.classList.add("service-card__border_blur");
+        });
+        serviceCards1.forEach((serviceCard) => {
+          serviceCard.classList.remove("service-card__border_blur");
+        });
+      } else {
+        serviceCards2.forEach((serviceCard) => {
+          serviceCard.classList.remove("service-card__border_blur");
+        });
+        serviceCards3.forEach((serviceCard) => {
+          serviceCard.classList.remove("service-card__border_blur");
+        });
+      }
+    })
 
-        serviceButtons.forEach(serviceButton => {
-            serviceButton.addEventListener('click', () => {
-                serviceButton.classList.toggle('service__button_item-active')
-            })
+    serviceButton2.addEventListener("click", () => {
+      serviceButton1.classList.remove("service__button_item-active");
+      serviceButton3.classList.remove("service__button_item-active");  
+      serviceButton2.classList.toggle("service__button_item-active");
+      if (serviceButton2.classList.contains("service__button_item-active")) {
+        serviceCards1.forEach((serviceCard) => {
+          serviceCard.classList.add("service-card__border_blur");
+        });
+        serviceCards3.forEach((serviceCard) => {
+          serviceCard.classList.add("service-card__border_blur");
+        });
+        serviceCards2.forEach((serviceCard) => {
+          serviceCard.classList.remove("service-card__border_blur");
+        });
+      } else {
+        serviceCards1.forEach((serviceCard) => {
+          serviceCard.classList.remove("service-card__border_blur");
+        });
+        serviceCards3.forEach((serviceCard) => {
+          serviceCard.classList.remove("service-card__border_blur");
+        });
+      }
+    });
 
-            if (serviceButton.classList.contains('service__button_item-active') > 2) {
-                serviceButton.classList.add('service-card__border_blur')
-            }
-        })
-
-
-
-        serviceButton1.addEventListener('click', () => {
-            serviceCards1.forEach(serviceCard => {
-                if (serviceCard.classList.contains('service-card__border_blur')) {   
-                    serviceCard.classList.remove('service-card__border_blur')
-                }               
-            })
-            serviceCards2.forEach(serviceCard => {
-                if (serviceButton2.classList.contains('service__button_item-active')) {
-                    serviceCard.classList.remove('service-card__border_blur')
-                } 
-                else if (!serviceButton1.classList.contains('service__button_item-active')) {
-                    serviceCard.classList.remove('service-card__border_blur')
-                } else {
-                    serviceCard.classList.add('service-card__border_blur')
-                }
-            })
-            serviceCards3.forEach(serviceCard => {
-                if (serviceButton3.classList.contains('service__button_item-active')) {
-                    serviceCard.classList.remove('service-card__border_blur')
-                } 
-                else if (!serviceButton1.classList.contains('service__button_item-active')) {
-                    serviceCard.classList.remove('service-card__border_blur')
-                } else {
-                    serviceCard.classList.add('service-card__border_blur')
-                }
-            })
-        })
-        serviceButton2.addEventListener('click', () => {
-            serviceCards2.forEach(serviceCard => {
-                if (serviceCard.classList.contains('service-card__border_blur')) {   
-                    serviceCard.classList.remove('service-card__border_blur')
-                }
-            })
-            serviceCards1.forEach(serviceCard => {
-                if (serviceButton1.classList.contains('service__button_item-active')) {
-                    serviceCard.classList.remove('service-card__border_blur')
-                }
-                else if (!serviceButton2.classList.contains('service__button_item-active')) {
-                    serviceCard.classList.remove('service-card__border_blur')
-                } else {
-                    serviceCard.classList.add('service-card__border_blur')
-                }
-            })
-            serviceCards3.forEach(serviceCard => {
-                if (serviceButton3.classList.contains('service__button_item-active')) {
-                    serviceCard.classList.remove('service-card__border_blur')
-                } 
-                else if (!serviceButton2.classList.contains('service__button_item-active')) {
-                    serviceCard.classList.remove('service-card__border_blur')
-                } else {
-                    serviceCard.classList.add('service-card__border_blur')
-                }
-            })
-        })
-        serviceButton3.addEventListener('click', () => {
-            serviceCards3.forEach(serviceCard => {
-                if (serviceCard.classList.contains('service-card__border_blur')) {   
-                    serviceCard.classList.remove('service-card__border_blur')
-                }
-            })
-            serviceCards1.forEach(serviceCard => {
-                if (serviceButton1.classList.contains('service__button_item-active')) {
-                    serviceCard.classList.remove('service-card__border_blur')
-                }
-                else if (!serviceButton3.classList.contains('service__button_item-active')) {
-                    serviceCard.classList.remove('service-card__border_blur')
-                } else {
-                    serviceCard.classList.add('service-card__border_blur')
-                }
-            })
-            serviceCards2.forEach(serviceCard => {
-                if (serviceButton2.classList.contains('service__button_item-active')) {
-                    serviceCard.classList.remove('service-card__border_blur')
-                } 
-                else if (!serviceButton3.classList.contains('service__button_item-active')) {
-                    serviceCard.classList.remove('service-card__border_blur')
-                } else {
-                    serviceCard.classList.add('service-card__border_blur')
-                }
-            })
-        })
+    serviceButton3.addEventListener("click", () => {
+      serviceButton2.classList.remove("service__button_item-active");
+      serviceButton1.classList.remove("service__button_item-active");
+      serviceButton3.classList.toggle("service__button_item-active");
+      if (serviceButton3.classList.contains("service__button_item-active")) {
+        serviceCards2.forEach((serviceCard) => {
+          serviceCard.classList.add("service-card__border_blur");
+        });
+        serviceCards1.forEach((serviceCard) => {
+          serviceCard.classList.add("service-card__border_blur");
+        });
+        serviceCards3.forEach((serviceCard) => {
+          serviceCard.classList.remove("service-card__border_blur");
+        });
+      } else {
+        serviceCards2.forEach((serviceCard) => {
+          serviceCard.classList.remove("service-card__border_blur");
+        });
+        serviceCards1.forEach((serviceCard) => {
+          serviceCard.classList.remove("service-card__border_blur");
+        });
+      }
+    });
 }());
 
 //Efect blur end
